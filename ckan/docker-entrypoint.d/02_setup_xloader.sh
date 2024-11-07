@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Set up ssl support
+curl $SSL_ROOT_BUNDLE > /etc/nginx/certs/root_store.crt
+update-ca-certificates
+
+
 # Set the name of the token to revoke
 TOKEN_NAME="xloader"
 
