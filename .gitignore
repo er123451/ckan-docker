@@ -39,3 +39,4 @@ doc/scripts/ckanapi/sites.yml
 sites.yml
 venv
 env
+certs/root_store.crt

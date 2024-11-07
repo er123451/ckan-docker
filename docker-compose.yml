@@ -24,6 +24,8 @@ services:
       - ckannet
     depends_on:
       - ckan
+    volumes:
+      - ./certs:/etc/nginx/certs
     ports:
       - "0.0.0.0:${NGINX_PORT_HOST}:${NGINX_PORT}"
       - "0.0.0.0:${NGINX_SSLPORT_HOST}:${NGINX_SSLPORT}"
@@ -56,6 +58,7 @@ services:
       - ckan_logs:/var/log
       - pip_cache:/root/.cache/pip
       - site_packages:/usr/lib/python3.9/site-packages
+      - ./certs:/etc/nginx/certs
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "-qO", "/dev/null", "http://localhost:5000"]
