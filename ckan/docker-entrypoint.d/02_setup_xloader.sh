@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set up ssl support
-curl $SSL_ROOT_BUNDLE > /etc/nginx/certs/root_store.crt
+curl $SSL_ROOT_BUNDLE > /usr/local/share/ca-certificates/root_store.crt
 update-ca-certificates
 
 

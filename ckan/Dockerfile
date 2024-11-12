@@ -34,7 +34,7 @@ RUN echo ${TZ} > /etc/timezone && \
     # Install CKAN extensions
     echo "ckan/ckanext-xloader" && \
     pip3 install --no-cache-dir -e git+https://github.com/mjanez/ckanext-xloader.git@1.0.1-stable#egg=ckanext-xloader && \ 
-    pip3 install --no-cache-dir -r ${APP_DIR}/src/ckanext-xloader/requirements.txt && \
+    pip3 install --no-cache-dir -r ${APP_DIR}/req_fixes/ckanext-xloader/requirements.txt && \
     pip3 install --no-cache-dir -U requests[security] && \
     echo "ckan/ckanext-harvest" && \
     pip3 install --no-cache-dir -e git+https://github.com/ckan/ckanext-harvest.git@v1.5.6#egg=ckanext-harvest && \
